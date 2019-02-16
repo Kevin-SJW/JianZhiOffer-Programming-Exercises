@@ -7,7 +7,7 @@ package JianZhiOffer;
 正常的思路就是二分查找了，我们用递归的方法实现了查找k第一次出现的下标，
 用循环的方法实现了查找k最后一次出现的下标。
 除此之外，还有另一种奇妙的思路，因为data中都是整数，所以我们不用搜索k的两个位置，
-而是直接搜索k-0.5和k+0.5这两个数应该插入的位置，然后相减即可。*/
+而是直接搜索k-0.5和k+0.5这两个数应该插入的位置，然后相减即可。 */
 public class GetNumberOfK {
     public int GetNumberOfK(int [] array , int k) {
         return biSearch(array, k+0.5) - biSearch(array, k-0.5);
