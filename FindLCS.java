@@ -14,19 +14,19 @@ table[ 2 ][ 3 ]±íÊ¾ ¡°ap¡± ºÍ ¡°app¡± µÄ×î³¤¹«¹²×Ö´®¡£×¢Òâµ½´úÂëÖĞ table µÄ´óĞ¡Î
     µ±ÎÒÃÇÒªÇótable[ i ][ j ]£¬ÎÒÃÇÒªÏÈÅĞ¶ÏA[ i ]ºÍB[ j ]ÊÇ·ñÏàÍ¬£¬
     Èç¹ûÏàÍ¬Ëû¾ÍÊÇtable[ i - 1 ][ j - 1 ] + 1£¬Ïàµ±ÓÚÔÚÁ½¸ö×Ö·û´®¶¼È¥µôÒ»¸ö×Ö·ûÊ±µÄ×î³¤¹«¹²×Ö´®ÔÙ¼Ó 1£»
     ·ñÔò×î³¤¹«¹²×Ö´®È¡table[ i ][ j - 1 ] ºÍtable[ i - 1 ][ j ] ÖĞ´óÕß¡£*/
+
 public class FindLCS {
 	
 		public int findLCS(String A, int n, String B, int m) {
 		        // write code here
-		        char[] a = A.toCharArray(),b = B.toCharArray();
-		        int[][] dp = new int[n+1][m+1];
-		        for(int i=0;i<n;i++){
-		            for(int j=0;j<m;j++){
-		                dp[i+1][j+1]= a[i]==b[j]?dp[i][j]+1 :
-		                               Math.max(dp[i][j+1],dp[i+1][j]);
-		            }
-		        }
-		        return dp[n][m];
+			int[][] dp = new int[n + 1][m + 1];
+	        for (int i = 1; i < n + 1; i ++ ) {
+	            for (int j = 1; j < m + 1; j ++ ) {
+	                if(A.charAt(i - 1) == B.charAt(j - 1)) dp[i][j] = dp[i - 1][j - 1] + 1;
+	                else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+	            }
+	        }
+	        return dp[n][m];
 		    }
 		}
 
