@@ -16,7 +16,6 @@ table[ 2 ][ 3 ]±íÊ¾ ¡°ap¡± ºÍ ¡°app¡± µÄ×î³¤¹«¹²×Ö´®¡£×¢Òâµ½´úÂëÖĞ table µÄ´óĞ¡Î
     ·ñÔò×î³¤¹«¹²×Ö´®È¡table[ i ][ j - 1 ] ºÍtable[ i - 1 ][ j ] ÖĞ´óÕß¡£*/
 public class FindLCS {
 	
-
 		public int findLCS(String A, int n, String B, int m) {
 		        // write code here
 		        char[] a = A.toCharArray(),b = B.toCharArray();
@@ -31,5 +30,15 @@ public class FindLCS {
 		    }
 		}
 
+/*python°æ±¾
 
+def findLCS(self, A, n, B, m):
+        #result[i][j]±£´æAÇ°i¸ö×Ó´®ºÍBÇ°j¸ö×Ó´®µÄ¹«¹²×ÓĞòÁĞ
+        result = [[0 for i in range(m+1)] for j in range(n+1)]
+        for i in range(1,n+1):
+            for j in range(1,m+1):
+                result[i][j] = max(result[i-1][j],result[i][j-1]) #Ä¬ÈÏ´«³ĞÖ®Ç°µÄ¹«¹²×ÓĞòÁĞ³¤¶È
+                if A[i-1]==B[j-1]:
+                    result[i][j] = result[i-1][j-1]+1 #µÈÓÚ×Ó´®¶¼¼õÒ»µÄ¹«¹²×ÓĞòÁĞ³¤¶È¼ÓÒ»
+        return result[-1][-1]*/
 
