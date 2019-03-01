@@ -7,15 +7,7 @@ import java.util.*;
 public class ArrayFindDup {
 	public static int ArrayFindDup(int[] arr){
 		int n=arr.length;
-//		int tmp1=0;
-//		int tmp2=0;
-//		for(int i=0;i<n-1;i++){
-//			tmp1+=(i+1);
-//			tmp2+=arr[i];
-//		}
-//		tmp2+=arr[n-1];
-//		int result=tmp2-tmp1;
-//		return result;
+//		
 		int result=0;
 		for(int i=0;i<n;i++){
 			result^=arr[i];
