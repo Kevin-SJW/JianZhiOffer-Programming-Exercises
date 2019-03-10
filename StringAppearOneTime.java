@@ -1,8 +1,8 @@
 package JianZhiOffer;
 
-
 import java.util.*;
-;public class StringAppearOneTime {
+/*一、输出一个字符串中从后往前看最早出现且只出现一次的字符，如果所有字符出现次数都大于一次，则输出NULL*/
+public class StringAppearOneTime {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
