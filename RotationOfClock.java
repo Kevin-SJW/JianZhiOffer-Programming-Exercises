@@ -30,10 +30,11 @@ public class RotationOfClock {
 		Double secondAngle=((second2-second1)/60)*360;
 		Double minuteAngle=(secondAngle/60);
 		Double hourAngle=(minuteAngle/12);
+
 		
-		System.out.println(hourAngle);
-		System.out.println(minuteAngle);
-		System.out.println(secondAngle);
+		System.out.println(new Double(hourAngle).intValue());
+		System.out.println(new Double(minuteAngle).intValue());
+		System.out.println(new Double(secondAngle).intValue());
 		
 		
 		
