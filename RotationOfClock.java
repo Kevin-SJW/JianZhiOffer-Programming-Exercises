@@ -9,6 +9,7 @@ import java.util.Scanner;
  * 输出540
  * 	   6480
  *     388800*/
+/*时分秒指针的旋转角度*/
 public class RotationOfClock {
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
@@ -31,6 +32,7 @@ public class RotationOfClock {
 		Double minuteAngle=(secondAngle/60);
 		Double hourAngle=(minuteAngle/12);
 
+		
 		
 		System.out.println(new Double(hourAngle).intValue());
 		System.out.println(new Double(minuteAngle).intValue());
