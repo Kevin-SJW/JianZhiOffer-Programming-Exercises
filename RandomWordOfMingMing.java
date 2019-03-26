@@ -23,27 +23,30 @@ OutputArray    输出处理后的随机整数
 
 注：测试用例保证输入参数的正确性，答题者无需验证。测试用例不止一组。*/
 import java.util.*;
-public class RandomWordOfMingMing{
-	public static void main(String[] args){
-        Scanner sc =new Scanner(System.in);
-        while(sc.hasNext()){
-            int n=sc.nextInt();
-        int[] num=new int[n];
-        List<Integer> list=new ArrayList<>();
-        for(int i=0;i<n;i++){
-            num[i]=sc.nextInt();
-        }
-        for(int i=0;i<num.length;i++){
-            if(!list.contains(num[i])){
-                list.add(num[i]);
-            }
-        }
-            Collections.sort(list);
-           
-          for(int list_:list){
-              System.out.println(list_);
-          }
-        }
-    }
+/*去重，排序*/
+
+public class RandomWordOfMingMing {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		while (sc.hasNext()) {
+			int n = sc.nextInt();
+			int[] num = new int[n];
+			List<Integer> list = new ArrayList<>();
+			for (int i = 0; i < n; i++) {
+				num[i] = sc.nextInt();
+			}
+			for (int i = 0; i < num.length; i++) {
+				if (!list.contains(num[i])) {
+					list.add(num[i]);
+				}
+			}
+			Collections.sort(list);
+
+			
+			for (int list_ : list) {
+				System.out.println(list_);
+			}
+		}
+	}
 
 }
